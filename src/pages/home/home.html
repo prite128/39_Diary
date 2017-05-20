@@ -1,0 +1,46 @@
+<ion-header>
+
+
+  <ion-navbar>
+    <ion-title>
+        🎀📝  D I A R Y 📝🎀  
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="gosave()">
+          <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+
+
+    <ion-item>
+
+      <ion-img style="width: 350px; height: 150px;" src="assets/icon/logo.png">
+    </ion-img>
+
+    <div text-center>
+      <h2> Collect everything you love ❤️ </h2>
+      <p>Express yourself in one Diary for life.</p>
+    </div>
+    </ion-item>
+
+
+
+
+
+    <ion-list inset>
+        <ion-item *ngFor="let birthday of birthdays" 
+        (click)="showDetail(birthday)">
+          <div item-left>{{ birthday.Name }}</div>
+
+          <div item-right>{{ birthday.Date | date:'yMMMMd' }}</div>
+        </ion-item>
+      </ion-list>
+
+</ion-content>

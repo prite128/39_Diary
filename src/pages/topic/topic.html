@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Details
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="showDetail()">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>  
+
+ <ion-img style="width: 350px; height: 150px;" src="assets/icon/logo.png">
+    </ion-img>
+    
+    <ion-list>
+        <ion-item>
+            <ion-label>Name</ion-label>
+            <ion-input text-right type="text" [(ngModel)]="birthday.Name">
+            </ion-input>
+        </ion-item>
+ 
+            <ion-label>Details</ion-label>
+<ion-card> 
+            <ion-textarea 
+             [(ngModel)]="birthday.Details">
+        
+            </ion-textarea>
+        </ion-card>
+
+
+
+
+    <button ion-button block color="dark" (click)="openMenu()">
+    Select options
+  </button>
+</ion-list>
+
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>  
+  <ion-navbar>
+    <ion-title>{{ action }} Diary</ion-title>
+    <ion-buttons end *ngIf="!isNew">
+      <button ion-button (click)="delete()">
+          <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>  
+    <ion-list>
+        <ion-item>
+            <ion-label>Name</ion-label>
+            <ion-input text-right type="text" [(ngModel)]="birthday.Name">
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Details</ion-label>
+            <ion-input text-right width=30% height=40%
+            [(ngModel)]="birthday.Details">
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime displayFormat="MMMM D, YYYY" pickerFormat="MMMM D YYYY" [(ngModel)]="isoDate"></ion-datetime>
+        </ion-item>
+    </ion-list>
+    <button ion-button block (click)="save()">Save</button>
+</ion-content> 
